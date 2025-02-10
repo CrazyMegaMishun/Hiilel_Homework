@@ -7,13 +7,7 @@ function pow(x, y) {
             }
             return result
 
-        case x < 0 && y < 0:
-            for (let i = 0; i < -y; i++) {
-                result *= x
-            }
-            return 1 / result
-
-        case x > 0 && y < 0:
+        case (x > 0 && y < 0) || (x < 0 && y < 0):
             for (let i = 0; i < -y; i++) {
                 result *= x
             }
