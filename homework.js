@@ -3,7 +3,7 @@ var services = {
     "гоління": "80 грн",
     "Миття голови": "100 грн",
     
-    getPrices: function(){
+    getPrices: function() {
         return Object.values(services)
             .filter(value => typeof value === "string")
             .map(value => parseInt(value))
