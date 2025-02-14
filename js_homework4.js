@@ -9,12 +9,10 @@ function checkProbabilityTheory(count){
         else odd++
     }
 
-    let evenToOdd = odd > 0 ? (even / odd) * 100 : 100
-
     return `Кількість згенерованих чисел: ${count}` + '\n' +
             `Парних чисел: ${even}` + '\n' +
             `Не парних чисел: ${odd}` + '\n' +
-            `Відсоток парних до не парних: ${evenToOdd}`
+            `Відсоток парних до не парних: ${Math.round(even > 0 ? (even / count) * 100 : 0)}% на ${Math.round(odd > 0 ? (odd / count) * 100 : 0)}%`
 }
 
 console.log(checkProbabilityTheory(100))
